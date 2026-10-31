@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest something you'd like Premium Home to do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: Describe the feature and where it would live (Home, Apps, Gaming, Settings, ambient, the helper).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful to you?
+  - type: input
+    id: tv
+    attributes:
+      label: Your TV model (optional)

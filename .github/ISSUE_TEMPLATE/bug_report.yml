@@ -1,0 +1,36 @@
+name: Bug report
+description: Something doesn't work on your TV or in the preview
+labels: [bug]
+body:
+  - type: input
+    id: tv
+    attributes:
+      label: TV model and webOS version
+      placeholder: e.g. OLED65C4PUA, webOS 25 (firmware 33.31.69)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Premium Home version (Settings › About)
+      placeholder: e.g. 0.9.6
+    validations:
+      required: true
+  - type: dropdown
+    id: helper
+    attributes:
+      label: Is the Home-button helper installed?
+      options: [No, Yes]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: Steps to reproduce help a lot. Please don't include your TV's IP address, passphrase or any personal names.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Anything from the Web Inspector console or the helper log (optional)
