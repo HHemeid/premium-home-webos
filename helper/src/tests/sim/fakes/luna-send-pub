@@ -1,0 +1,6 @@
+#!/usr/bin/python3 -I
+# SIMULATION ONLY: stand-in for /usr/bin/luna-send-pub used by helper-entry.js.
+import sys, json, time
+with open('/sim/luna-send-pub.log', 'a') as f:
+    f.write(json.dumps({'t': time.time(), 'argv': sys.argv[1:]}) + '\n')
+print('{"returnValue":true}')

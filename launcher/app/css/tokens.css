@@ -1,0 +1,49 @@
+/* Design tokens. Sizes are in 1920x1080 canvas pixels (10-foot viewing). */
+:root {
+  --black: #000;
+  --charcoal-1: #07080a;
+  --charcoal-2: #0d0f13;
+  --charcoal-3: #14171c;
+  --charcoal-4: #1c2027;
+
+  --line: rgba(255, 255, 255, .07);
+  --line-strong: rgba(255, 255, 255, .16);
+
+  /* Off-white, never pure white: less OLED stress on static text. */
+  --text: rgba(236, 240, 245, .92);
+  --text-2: rgba(236, 240, 245, .64);
+  --text-3: rgba(236, 240, 245, .42);
+  --danger: #ff9b9b;
+
+  --accent: #7fcbff;
+  --accent-rgb: 127, 203, 255;
+
+  --glass: rgba(20, 23, 29, .56);
+  --glass-solid: #121419;
+
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+
+  /* 5% title-safe margins of a 1920x1080 frame. */
+  --safe-x: 96px;
+  --safe-y: 54px;
+
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  /* Short on purpose: on the C4, long fades and slides read as lag (v0.5 TV profiling). */
+  --dur-fast: 140ms;
+  --dur: 180ms;
+  --dur-slow: 300ms;
+
+  --font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+[data-accent="glacier"] { --accent: #9fe3e8; --accent-rgb: 159, 227, 232; }
+[data-accent="graphite"] { --accent: #d6dae1; --accent-rgb: 214, 218, 225; }
+
+[data-motion="reduced"] { --dur-fast: 0ms; --dur: 0ms; --dur-slow: 0ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur: 0ms; --dur-slow: 0ms; }
+}

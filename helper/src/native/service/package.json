@@ -1,0 +1,5 @@
+{
+  "name": "com.local.premiumhome.homehelper.service",
+  "version": "0.1.0",
+  "main": "service.js"
+}

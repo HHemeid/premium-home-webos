@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium Home</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="viewport">
+    <!-- Fixed 1920x1080 canvas: the resolution webOS gives web apps. Scaled to fit in the Mac preview. -->
+    <div id="stage" class="stage" data-accent="ice" data-glass="on" data-motion="full" data-section="home">
+      <div class="ambient" aria-hidden="true"></div>
+      <!-- Scenic wallpaper or the owner's photo, built by js/backdrop.js. -->
+      <div id="wallpaper" class="wallpaper" aria-hidden="true" hidden></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <!-- Home hero scene (weather / cinematic artwork), built by js/scene.js. -->
+      <div id="scene" class="scene" aria-hidden="true" hidden></div>
+
+      <header id="topbar" class="topbar shiftable dimmable"></header>
+
+      <main class="views">
+        <section id="view-home" class="view" aria-label="Home"></section>
+        <section id="view-apps" class="view" aria-label="Apps"></section>
+        <section id="view-gaming" class="view" aria-label="Gaming"></section>
+        <section id="view-settings" class="view" aria-label="Settings"></section>
+      </main>
+
+      <footer id="hintbar" class="hintbar shiftable dimmable"></footer>
+      <!-- Ambient view (full-screen time + weather), built by js/ambient.js. -->
+      <div id="ambient" class="ambient-view" hidden></div>
+
+      <div id="layer-dialog"></div>
+      <div id="layer-launch"></div>
+      <div id="toast" class="toast glass" role="status"></div>
+      <div id="screensaver" class="screensaver" aria-hidden="true"></div>
+      <div id="safe-guides" class="safe-guides" hidden><span>5% title-safe area</span></div>
+    </div>
+  </div>
+
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <input type="file" id="photo-file" accept="image/jpeg,image/png,image/webp" hidden>
+
+  <!-- On the TV, LG's webOSTV.js gets added here at packaging time. It is not part of v0.1. -->
+  <script src="js/util.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/wallpapers.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/platform.js"></script>
+  <script src="js/focus.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/daypart.js"></script>
+  <script src="js/recents.js"></script>
+  <script src="js/cw.js"></script>
+  <script src="js/vpn.js"></script>
+  <script src="js/photo.js"></script>
+  <script src="js/oled.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/backdrop.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/launcher.js"></script>
+  <script src="js/debloat.js"></script>
+  <script src="js/backup.js"></script>
+  <script src="js/weather-ui.js"></script>
+  <script src="js/ambient.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/quick.js"></script>
+  <script src="js/gaming.js"></script>
+  <script src="js/cw-ui.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

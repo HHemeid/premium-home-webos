@@ -1,0 +1,70 @@
+{
+  "latitude": 56.766254,
+  "longitude": -111.320755,
+  "generationtime_ms": 0.4636049270629883,
+  "utc_offset_seconds": -21600,
+  "timezone": "America/Edmonton",
+  "timezone_abbreviation": "GMT-6",
+  "elevation": 250.0,
+  "current_units": {
+    "time": "iso8601",
+    "interval": "seconds",
+    "temperature_2m": "\u00b0C",
+    "apparent_temperature": "\u00b0C",
+    "is_day": "",
+    "weather_code": "wmo code",
+    "cloud_cover": "%",
+    "precipitation": "mm",
+    "wind_speed_10m": "km/h"
+  },
+  "current": {
+    "time": "2026-10-27T11:00",
+    "interval": 900,
+    "temperature_2m": -2.0,
+    "apparent_temperature": -5.0,
+    "is_day": 1,
+    "weather_code": 3,
+    "cloud_cover": 100,
+    "precipitation": 0.0,
+    "wind_speed_10m": 1.7
+  },
+  "daily_units": {
+    "time": "iso8601",
+    "weather_code": "wmo code",
+    "temperature_2m_max": "\u00b0C",
+    "temperature_2m_min": "\u00b0C",
+    "precipitation_probability_max": "%"
+  },
+  "daily": {
+    "time": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30"
+    ],
+    "weather_code": [
+      73,
+      73,
+      71,
+      0
+    ],
+    "temperature_2m_max": [
+      1.8,
+      -0.4,
+      -2.0,
+      1.5
+    ],
+    "temperature_2m_min": [
+      -6.7,
+      -2.9,
+      -10.3,
+      -11.1
+    ],
+    "precipitation_probability_max": [
+      71,
+      100,
+      90,
+      0
+    ]
+  }
+}

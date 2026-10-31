@@ -1,0 +1,21 @@
+#!/usr/bin/python3 -I
+# SIMULATION ONLY: fake Luna bus. Logs each call to /sim/luna.log; launch replies
+# follow /sim/launch-mode: ok | missing | hang | delay:<ms>
+import sys, json, time, os
+uri, args = sys.argv[1], json.loads(sys.argv[2])
+with open('/sim/luna.log', 'a') as f:
+    f.write(json.dumps({'t': time.time(), 'uri': uri, 'args': args}) + '\n')
+if uri.endswith('applicationManager/launch'):
+    mode = open('/sim/launch-mode').read().strip() if os.path.exists('/sim/launch-mode') else 'ok'
+    if mode.startswith('delay:'):
+        time.sleep(int(mode[6:]) / 1000); mode = 'ok'
+    if mode == 'hang':
+        time.sleep(30)
+    if mode == 'missing':
+        print(json.dumps({'returnValue': False, 'errorCode': -101, 'errorText': '"%s" was not found OR Unsupported Application Type' % args.get('id')}))
+    else:
+        print(json.dumps({'returnValue': True, 'processId': '1234'}))
+elif uri.endswith('/status'):
+    print(json.dumps({'returnValue': True, 'state': {'enabled': True, 'schema': 3}}))
+else:
+    print(json.dumps({'returnValue': True}))

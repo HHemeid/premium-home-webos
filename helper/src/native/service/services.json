@@ -1,0 +1,1 @@
+{"id": "com.local.premiumhome.homehelper.service", "description": "Premium Home Home Helper: start once per boot", "services": [{"name": "com.local.premiumhome.homehelper.service"}], "requiredACG": ["activity.operation", "application.launcher"]}

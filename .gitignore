@@ -1,0 +1,27 @@
+# LG webOS CLI (install with launcher/tools/setup-webos-cli.sh)
+launcher/tools/webos-cli/
+# Built packages and local test output
+launcher/dist/
+launcher/test-output/
+launcher/screenshots/
+helper/build/
+helper/dist*/
+helper/test-output/
+# Brand logos are fetched on your machine (tools/fetch-logos.py), never committed
+launcher/app/assets/brands/youtube.svg
+launcher/app/assets/brands/netflix.svg
+launcher/app/assets/brands/disneyplus.svg
+launcher/app/assets/brands/primevideo.svg
+launcher/app/assets/brands/stremio.svg
+launcher/app/assets/brands/tubi.svg
+launcher/app/assets/brands/twitch.svg
+launcher/app/assets/brands/xbox.svg
+launcher/app/assets/brands/geforcenow.svg
+# Never commit anything about your own TV or accounts
+*.pem
+*.key
+*secret*
+.DS_Store
+__pycache__/
+*.pyc
+*.zip

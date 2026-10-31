@@ -1,0 +1,24 @@
+Premium Home Helper (com.local.premiumhome.homehelper)
+=======================================================
+
+This is a minimal fork of the "Home Helper" from Clean Your TV for LG webOS:
+  https://github.com/Razdva122/clean-your-tv-lg-webos
+  forked from commit b473faeb944eeaff89df083d840bb90126e49253 (main, 2026-10-27)
+Upstream files used: native/app/{detach.c,lock.h,helper-entry.js,native.js,
+runtime-policy.js,appinfo.json}, native/prototype/{relay.c,filter.c,filter.h,
+startup.h,test_*.c,test-runtime-policy.cjs,test-boot-state.cjs},
+native/service/{service.js,boot-state.js,services.json,package.json},
+scripts/fix-package-data.py, and test ideas from tests/controller-home.cjs,
+tests/helper-entry.cjs and tests/helper-runtime.js.
+
+Upstream is distributed under the MIT License; its LICENSE file is reproduced
+unchanged in ./LICENSE (copyright notices of Gathin and OmkarK97 as listed
+there) and applies to the upstream-derived portions of this fork. Fork changes
+are likewise offered under the MIT License. Changes are described in
+FORK-NOTES.md and upstream.diff (one level up from src/).
+
+Not included from upstream: the bundled ws / ws-legacy WebSocket libraries,
+SSAP screen-watch, app inventory, EIM setup, resume.c, the launcher web app,
+updater, renewal service, root edition and all prebuilt binaries
+(native/published/*). The icons are generated placeholders, not upstream art.
+webos-service is supplied by the TV runtime and is not redistributed.

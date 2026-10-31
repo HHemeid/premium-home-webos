@@ -1,0 +1,19 @@
+{
+  "id": "com.local.premiumhome.homehelper",
+  "version": "0.1.0",
+  "type": "native",
+  "main": "detach",
+  "title": "Premium Home Helper",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "requiredACG": [
+    "application.launcher",
+    "activity.operation",
+    "activity.query"
+  ],
+  "noWindow": true,
+  "noSplashOnLaunch": true,
+  "spinnerOnLaunch": false,
+  "iconColor": "#241d19",
+  "titleVisible": true
+}
